@@ -1,0 +1,59 @@
+FUNCION generar_matriz(n):
+    valors = concatenar todas las letras del alfabeto y todos los dígitos y símbolos especiales
+    barajar(valors)
+    matriz = lista vacía
+    PARA cada fila en rango(n):
+        fila = lista vacía
+        PARA cada columna en rango(n):
+            agregar un valor aleatorio de valors a la fila
+        agregar fila a matriz
+    RETORNAR matriz
+
+FUNCION mostrar_matriz(matriz):
+    PARA cada fila en matriz:
+        imprimir fila separada por espacios
+
+FUNCION ocultar_valor(matriz, valor):
+    PARA cada fila en matriz:
+        SI valor está en la fila:
+            reemplazar valor con "*"
+            ROMPER
+programa para_generar_matriz_de valores_aleaatorios
+
+FUNCION revelar_valor(matriz, valor):
+    PARA cada fila en matriz:
+        SI "*" está en la fila:
+            reemplazar "*" con valor
+
+FUNCION obtener_limite_de_tiempo(n):
+    RETORNAR máximo de 3 y (3 + 0.5 * (n - 3))
+
+FUNCION jugar():
+    n = convertir a entero(input("El tamaño de la cuadrícula será de (n*n): "))
+    matriz = generar_matriz(n)
+
+    imprimir "Valores recordados"
+    mostrar_matriz(matriz)
+    limite_de_tiempo = obtener_limite_de_tiempo(n)
+    esperar(limite_de_tiempo)
+
+    valor_oculto = seleccionar aleatoriamente un valor de la primera fila de matriz
+    ocultar_valor(matriz, valor_oculto)
+
+    imprimir "Encuentra el valor oculto:"
+    mostrar_matriz(matriz)
+    respuesta = input("\nRespuesta dada: ")
+    revelar_valor(matriz, valor_oculto)
+    SI respuesta es igual a valor_oculto:
+        imprimir "¡Correcto! Has encontrado el valor oculto."
+    SINO:
+        imprimir "Incorrecto. El valor era", valor_oculto
+
+FUNCION principal():
+    mientras Verdadero:
+        jugar()
+        SI convertir a minúsculas(input("¿Quieres volver a jugar? (s/n): ")) no es igual a "s":
+            ROMPER
+
+SI __name__ es igual a "__main__":
+    principal()

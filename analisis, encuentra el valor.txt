@@ -1,0 +1,21 @@
+Descripción del problema:
+crear un codigo el cual usando matrizes cree una cuadricula de números, signos, letras, dependiendo el tamaño de la cuadricula se establece un tiempo para memorizar lo que aparece en la cuadricula y cuando se acabe el tiempo tapar un numero ala azar y que el usuario escriba la letra, numero o signo elegido aleatoriamente
+
+Entrada:
+- numero entero positivo mayor a uno (1), ya elejido el numero el numero se multiplicara por si mosmo creando una cuadricula con el sesultado 
+
+Salida
+- una cuadricula con valores (numeros, letras, signos) al azar el cual pasado un tiempo se oculte un valor al azar, y el usuario debe escribir el valor que el crea que se a ocultado, si el valor que eligio por el usuario es el que se oculto mostrar un mensaje "¡Correcto! Has encontrado el valor oculto." de lo contrario mostrar "Incorrecto. El valor era (valor corecto)"
+
+Proceso:
+- Se ingresa en numero entero positivo mayor a uno (1).
+- Se crea una matrix en la cual dentro de ella tenga valores al azar (numeros, signos, letras) teniendo en cuanta el numero anteriormente dado.
+- Se oculta un valor de la matrix al azar.
+- el ususario elige el valor que el cree que se oculto.
+- mostrar mensaje diciendo si acerto o no al valor oculto.
+- mostrar mensaje diciendo si el usuario desea o no jugar otra vez.
+
+Restricciones:
+
+- Al momento de ingresar el numero tener en cuenta que no puede se un numero menor o igual a cero (0)
+- 
